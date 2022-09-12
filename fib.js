@@ -1,9 +1,14 @@
-function run (n) {
+const btn = document.getElementById("btn")
+
+
+btn.onclick = function run (n) {
     let arr = [0,1];
     for (let i = 2; i < n + 1; i++) {
         arr.push(arr[i-2] + arr[i-1])
     }
-    return arr [n]
+    //return arr [n]
+    console.log(arr)
     }
 
     
+// object.onclick
