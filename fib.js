@@ -1,21 +1,22 @@
 const btn = document.getElementById("btn");
-const input = document.getElementById("input")
+const input = document.getElementById("input");
+const arrayStart = [0, 1];
+//Array(100).fill(1).map((n,i) => n + i)
+console.log(arrayStart);
+// console.log ((arr-1) + (arr-2))
 
+const fibonacci = function (n1, n2) {
+  const nextNumber = n1 + n2;
+  
+  if (nextNumber <= 50) {
+    var newArray = arrayStart.push(nextNumber);
+   
+    fibonacci(arrayStart[arrayStart.length-2], arrayStart[arrayStart.length-1])
+  } else {
+    console.log(arrayStart, "stop");
+  }
 
-function run (n) {
-    let arr = [0,1];
-    for (let i = 2; i < n + 1; i++) {
-        arr.push(arr[i-2] + arr[i-1])
-    }
-    return arr [n];
-    
-    // console.log(arr)
-    }
-
-    
-btn.onclick = function fib (n) {
-    if (n<2){
-        return n
-    }
-    console.log(fib(n-1) + fib(n-2))
+  return newArray;
 };
+
+fibonacci(arrayStart[0], arrayStart[1]);
